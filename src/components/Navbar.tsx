@@ -28,7 +28,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border/30"
+            ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-white/10"
             : "bg-transparent"
         }`}
       >
@@ -38,9 +38,9 @@ export default function Navbar() {
               <span className="text-white font-black text-lg leading-none">S</span>
             </div>
             <div>
-              <span className="font-black text-xl text-heading tracking-tight">Swift</span>
+              <span className="font-black text-xl text-white tracking-tight">Swift</span>
               <span className="font-black text-xl text-primary tracking-tight">Move</span>
-              <div className="text-[10px] font-bold uppercase tracking-widest text-foreground/50 leading-none mt-0.5">Logistics</div>
+              <div className="text-[10px] font-bold uppercase tracking-widest text-white/50 leading-none mt-0.5">Logistics</div>
             </div>
           </a>
 
@@ -49,9 +49,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className={`text-sm font-bold uppercase tracking-widest transition-colors duration-300 relative group ${
-                    scrolled ? "text-heading" : "text-heading"
-                  } hover:text-primary`}
+                  className="text-sm font-bold uppercase tracking-widest transition-colors duration-300 relative group text-white hover:text-primary"
                 >
                   {link.label}
                   <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full" />
@@ -63,7 +61,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:0234567891"
-              className="flex items-center gap-2 text-sm font-bold text-heading hover:text-primary transition-colors duration-300"
+              className="flex items-center gap-2 text-sm font-bold text-white hover:text-primary transition-colors duration-300"
             >
               <Phone size={16} className="text-primary" />
               0234567891
@@ -77,7 +75,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden p-2 rounded-xl text-heading hover:text-primary transition-colors duration-300"
+            className="lg:hidden p-2 rounded-xl text-white hover:text-primary transition-colors duration-300"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -92,7 +90,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-20 left-0 right-0 z-40 bg-background/98 backdrop-blur-md shadow-2xl border-b border-border/30 lg:hidden"
+            className="fixed top-20 left-0 right-0 z-40 bg-background/98 backdrop-blur-md shadow-2xl border-b border-white/10 lg:hidden"
           >
             <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-6">
               {links.map((link) => (
@@ -100,15 +98,15 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-base font-bold uppercase tracking-widest text-heading hover:text-primary transition-colors duration-300"
+                  className="text-base font-bold uppercase tracking-widest text-white hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-4 border-t border-border/30 flex flex-col gap-4">
+              <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
                 <a
                   href="tel:0234567891"
-                  className="flex items-center gap-3 text-heading font-bold"
+                  className="flex items-center gap-3 text-white font-bold"
                 >
                   <Phone size={18} className="text-primary" />
                   0234567891
